@@ -66,3 +66,8 @@ document.getElementById("send-button").addEventListener("click", function () {
   var message = wishesInput.trim() !== "" ? wishesInput : defaultMessage;
   window.open("https://api.whatsapp.com/send?phone=+62859111488834&text=" + encodeURIComponent(message));
 });
+
+document.addEventListener("click", function () {
+  var audio = new Audio("Nadhif Basalamah  penjaga hati Lirik.mp3");
+  audio.play();
+});
