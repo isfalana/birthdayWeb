@@ -43,22 +43,18 @@ document.addEventListener("scroll", function () {
 
   // Tampilkan .scroll-instruction ketika mencapai nilai scroll tertentu (contoh: 200 piksel dari atas)
   var scrollInstruction = document.getElementById("scrollInstruction");
-  if (scrollPosition > 400) {
-    scrollInstruction.style.opacity = 0;
-    scrollInstruction.style.transform = "translateY(50px)";
-  } else {
+  if (scrollPosition > 300) {
     scrollInstruction.style.opacity = 1;
-    scrollInstruction.style.transform = "translateY(0)";
+  } else {
+    scrollInstruction.style.opacity = 0;
   }
 
   // Tampilkan .wishes-form ketika mencapai nilai scroll tertentu (contoh: 400 piksel dari atas)
   var wishesForm = document.getElementById("wishesForm");
   if (scrollPosition > 400) {
     wishesForm.style.opacity = 1;
-    scrollForm.style.transform = "translateY(50px)";
   } else {
     wishesForm.style.opacity = 0;
-    wishesForm.style.transform = "translateY(0)";
   }
 });
 
