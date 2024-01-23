@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fde2e4;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  width: 700px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInWithBlur 1s forwards;
+}
+
+.card-envelope {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 125px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.instruction {
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+h1 {
+  color: #d9346f;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInWithBlur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutSmooth {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.envelope {
+  width: 100%;
+  max-width: 70px;
+  margin: 0 auto;
+  cursor: pointer;
+  animation: heartbeat 1.5s infinite linear;
+  transition: opacity 1s ease;
+}
+
+.envelope.envelope-clicked {
+  animation: fadeOutSmooth 0.8s ease-in-out forwards;
+}
+
+@media (max-width: 600px) {
+  .envelope {
+    max-width: 150px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+.scroll-instruction {
+  bottom: 20px;
+  text-align: center;
+  opacity: 0;
+  padding-bottom: 20px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: arrowAnimation 1s infinite alternate;
+}
+
+.scroll-down-arrow {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #d9346f;
+  margin-top: 10px;
+  animation: arrowAnimation 1s infinite alternate;
+}
+
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px); /* Sesuaikan dengan seberapa jauh panah bergerak ke atas */
+  }
+}
+
+.wishes-input {
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.send-wishes-button {
+  background-color: #d9346f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-wishes-button:hover {
+  background-color: #db7196;
+  scale: 1;
+}
+.send-wishes-button:hover:active {
+  scale: 0.9;
+}
+
+.wishes-form {
+  margin: auto;
+  margin-bottom: 100px;
+  width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transition: opacity 0.5s ease-in-out;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ucapan Ulang Tahun untuk Ncip</title>
+  </head>
+  <body>
+    <div class="card-envelope" id="cardEnvelope">
+      <p class="instruction" id="instruction1">Klik amplop nya yaaa..</p>
+      <img src="icons8-envelope-64.png" alt="Amplop" class="envelope" id="envelope" onclick="showCard()" />
+      <p class="instruction" id="instruction2">Cintaaa:v</p>
+    </div>
+
+    <div class="container">
+      <div class="card" id="birthdayCard">
+        <h1>Selamat Ulang Tahun, Ncip!</h1>
+        <p style="font-weight: 600">Semoga hari ulang tahunmu penuh kebahagiaan dan cinta. Terima kasih telah menjadi bagian dari hidupku.</p>
+        <img src="icons8-love-96.png" alt="Ucapan Ulang Tahun" />
+        <p class="signature">Dengan cinta,<br />Lana</p>
+      </div>
+    </div>
+    <div class="scroll-instruction" id="scrollInstruction">
+      <p style="font-weight: 600">Scroll ke bawah lagi yaa sayangkuu :v</p>
+      <div class="scroll-down-arrow"></div>
+    </div>
+
+    <div class="wishes-form" id="wishesForm" style="display: none">
+      <h2>Tulis Harapanmu:</h2>
+      <textarea class="wishes-input" id="wishesInput" placeholder="Tulis harapan kamu yaa..." required></textarea>
+      <button class="send-wishes-button" id="send-button" onclick="sendWishes()">Kirim Harapan</button>
+    </div>
+    <audio autoplay>
+      <source src="Nadhif Basalamah  penjaga hati Lirik.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
